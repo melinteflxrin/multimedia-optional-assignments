@@ -1,0 +1,306 @@
+/* Exercise 7: Enhanced card styling with custom CSS */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.page-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Exercise 6: Search/filter feature */
+.search-section {
+    margin-bottom: 30px;
+}
+
+.search-section input {
+    border-radius: 25px;
+    padding: 12px 24px;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search-section input:focus {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+    outline: none;
+}
+
+/* Exercise 8: Sort buttons */
+.sort-section {
+    margin-bottom: 20px;
+}
+
+.sort-section .btn-group {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Exercise 7: Card styling with hover effects */
+.album-card {
+    transition: all 0.3s ease;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.album-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Exercise 7: Image container with overlay */
+.card-img-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+.card-img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.album-card:hover .card-img-container img {
+    transform: scale(1.1);
+}
+
+.card-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 15px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.album-card:hover .card-img-overlay {
+    transform: translateY(0);
+}
+
+.card-img-overlay h6 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Card body styling */
+.album-card .card-body {
+    padding: 1.5rem;
+}
+
+.album-card .card-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.album-card .card-text {
+    color: #666;
+    margin-bottom: 0;
+}
+
+.album-card .card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    padding: 1rem;
+}
+
+.album-card .btn-view-tracklist {
+    width: 100%;
+    border-radius: 25px;
+    padding: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.album-card .btn-view-tracklist:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Exercise 3 & 9: Modal styling */
+.modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.track-statistics {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.track-statistics h6 {
+    color: #667eea;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item .stat-label {
+    font-size: 0.85rem;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-item .stat-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Exercise 4: Tracklist styling */
+.tracklist-table {
+    margin-bottom: 0;
+}
+
+.tracklist-table thead {
+    background-color: #667eea;
+    color: white;
+}
+
+.tracklist-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.tracklist-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.track-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.track-link:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.spotify-icon {
+    color: #1DB954;
+    margin-right: 5px;
+}
+
+/* Exercise 10: Back to top button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+#backToTop.show {
+    opacity: 1;
+}
+
+#backToTop:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Exercise 10: Mobile-friendly adjustments */
+@media (max-width: 576px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sort-section .btn-group {
+        width: 100%;
+    }
+
+    .sort-section .btn {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
+
+    #backToTop {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Loading spinner */
+.loading {
+    text-align: center;
+    padding: 50px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
