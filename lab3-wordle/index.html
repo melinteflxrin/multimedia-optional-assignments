@@ -4,15 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wordle Game</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <script type="text/javascript" src="scripts/wordle.js"></script>
 </head>
 
 <body>
-    <div id="board"></div>
-    <input type="text" id="guessInput" />
-    <button type="button" id="guessButton">Guess</button>
+    <div id="container">
+        <h1>WORDLE</h1>
+        <div id="message" class="message hidden"></div>
+        <div id="board"></div>
+        <div id="input-section">
+            <input type="text" id="guessInput" placeholder="Enter 5-letter word" maxlength="5" />
+            <button type="button" id="guessButton">Guess</button>
+        </div>
+        <button type="button" id="newGameButton" class="hidden">New Game</button>
+        <div id="stats" class="hidden">
+            <h3>Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-value" id="gamesPlayed">0</span>
+                    <span class="stat-label">Played</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="winPercentage">0</span>
+                    <span class="stat-label">Win %</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="currentStreak">0</span>
+                    <span class="stat-label">Streak</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
