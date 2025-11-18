@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Exercise 1: Center keyboard on viewport */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+        }
+
+        #keyboard {
+            background-color: #333;
+            border: 1px solid black;
+            padding: 200px 20px 30px 20px;
+            border-radius: 15px; /* Exercise 2: Border radius for keyboard */
+        }
+
+        #keypad {
+            background-color: #333; /* Changed from red to match keyboard */
+            display: flex;
+            width: 100%; /* Exercise 3: Fill 100% width */
+            border-radius: 8px; /* Exercise 2: Border radius for keypad */
+        }
+
+        .whiteKey {
+            height: 240px;
+            width: 40px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 0 0 5px 5px; /* Exercise 2: Border radius for keys */
+            position: relative; /* For positioning labels */
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            /* Exercise 7: Shadows for white keys */
+            box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.2), 0px 4px 6px rgba(0, 0, 0, 0.1);
+            /* Exercise 5: Smooth transitions */
+            transition: all 0.1s ease;
+        }
+
+        /* Exercise 4: Hover effects for white keys */
+        .whiteKey:hover {
+            background-color: #f0f0f0;
+            /* Exercise 7: Pressed-in shadow effect */
+            box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.3), 0px 2px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .blackKey {
+            height: 140px;
+            width: 24px;
+            background-color: black;
+            border: 1px solid black;
+            margin: 0 -13px;
+            z-index: 2;
+            border-radius: 0 0 3px 3px; /* Exercise 2: Border radius for black keys */
+            position: relative; /* For positioning labels */
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            /* Exercise 7: Shadows for black keys */
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.5), inset 0px -2px 4px rgba(255, 255, 255, 0.1);
+            /* Exercise 5: Smooth transitions */
+            transition: all 0.1s ease;
+        }
+
+        /* Exercise 4: Hover effects for black keys */
+        .blackKey:hover {
+            background-color: #333;
+            /* Exercise 7: Pressed-in shadow effect */
+            box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5), inset 0px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Exercise 6: Note labels */
+        .whiteKey span, .blackKey span {
+            font-size: 10px;
+            text-align: center;
+            padding-bottom: 5px;
+            user-select: none;
+        }
+
+        .whiteKey span {
+            color: #666;
+        }
+
+        .blackKey span {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div id="keyboard">
+        <div id="keypad">
+            <!-- Octave 1 -->
+            <div class="whiteKey"><span>C</span></div>
+            <div class="blackKey"><span>C#</span></div>
+            <div class="whiteKey"><span>D</span></div>
+            <div class="blackKey"><span>Eb</span></div>
+            <div class="whiteKey"><span>E</span></div>            
+            <div class="whiteKey"><span>F</span></div>
+            <div class="blackKey"><span>F#</span></div>
+            <div class="whiteKey"><span>G</span></div>
+            <div class="blackKey"><span>G#</span></div>
+            <div class="whiteKey"><span>A</span></div>
+            <div class="blackKey"><span>Bb</span></div>            
+            <div class="whiteKey"><span>B</span></div>
+            <!-- Octave 2 -->
+            <div class="whiteKey"><span>C</span></div>
+            <div class="blackKey"><span>C#</span></div>
+            <div class="whiteKey"><span>D</span></div>
+            <div class="blackKey"><span>Eb</span></div>
+            <div class="whiteKey"><span>E</span></div>            
+            <div class="whiteKey"><span>F</span></div>
+            <div class="blackKey"><span>F#</span></div>
+            <div class="whiteKey"><span>G</span></div>
+            <div class="blackKey"><span>G#</span></div>
+            <div class="whiteKey"><span>A</span></div>
+            <div class="blackKey"><span>Bb</span></div>            
+            <div class="whiteKey"><span>B</span></div>
+            <!-- Octave 3 -->
+            <div class="whiteKey"><span>C</span></div>
+            <div class="blackKey"><span>C#</span></div>
+            <div class="whiteKey"><span>D</span></div>
+            <div class="blackKey"><span>Eb</span></div>
+            <div class="whiteKey"><span>E</span></div>            
+            <div class="whiteKey"><span>F</span></div>
+            <div class="blackKey"><span>F#</span></div>
+            <div class="whiteKey"><span>G</span></div>
+            <div class="blackKey"><span>G#</span></div>
+            <div class="whiteKey"><span>A</span></div>
+            <div class="blackKey"><span>Bb</span></div>            
+            <div class="whiteKey"><span>B</span></div>
+            <!-- Octave 4 -->
+            <div class="whiteKey"><span>C</span></div>
+            <div class="blackKey"><span>C#</span></div>
+            <div class="whiteKey"><span>D</span></div>
+            <div class="blackKey"><span>Eb</span></div>
+            <div class="whiteKey"><span>E</span></div>            
+            <div class="whiteKey"><span>F</span></div>
+            <div class="blackKey"><span>F#</span></div>
+            <div class="whiteKey"><span>G</span></div>
+            <div class="blackKey"><span>G#</span></div>
+            <div class="whiteKey"><span>A</span></div>
+            <div class="blackKey"><span>Bb</span></div>            
+            <div class="whiteKey"><span>B</span></div>
+            <!-- Octave 5 -->
+            <div class="whiteKey"><span>C</span></div>
+            <div class="blackKey"><span>C#</span></div>
+            <div class="whiteKey"><span>D</span></div>
+            <div class="blackKey"><span>Eb</span></div>
+            <div class="whiteKey"><span>E</span></div>            
+            <div class="whiteKey"><span>F</span></div>
+            <div class="blackKey"><span>F#</span></div>
+            <div class="whiteKey"><span>G</span></div>
+            <div class="blackKey"><span>G#</span></div>
+            <div class="whiteKey"><span>A</span></div>
+            <div class="blackKey"><span>Bb</span></div>            
+            <div class="whiteKey"><span>B</span></div>                       
+            <div class="whiteKey"><span>C</span></div>
+        </div>
+    </div>
+</body>
+</html>
