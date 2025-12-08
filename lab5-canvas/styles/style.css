@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #fff;
+    color: #222;
+}
+#chartCanvas {
+    border: 1px solid black;
+}
+
+.theme-dark {
+    background: #181818 !important;
+    color: #eee !important;
+}
+.theme-dark #chartCanvas {
+    border-color: #eee !important;
+}
+.theme-high {
+    background: #000 !important;
+    color: #ff0 !important;
+}
+.theme-high #chartCanvas {
+    border-color: #ff0 !important;
+}
+}
